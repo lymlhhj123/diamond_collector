@@ -44,7 +44,6 @@ class ScrapyCollector(diamond.collector.Collector):
 
 		result = rc.rpop('scrapy_stats')
 		if result:
-			result = result[1]	
 			x = json.loads(result if isinstance(result, str) 
 								     else result.decode())
 
